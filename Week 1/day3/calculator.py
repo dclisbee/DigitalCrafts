@@ -13,5 +13,4 @@ if input2 == "-":
 else:
     print("Please type a proper operand")
 
-
 print(output)
