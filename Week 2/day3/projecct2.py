@@ -41,6 +41,7 @@ class randStats():
         self.hp = random.randint(50,100)
         listOfItems = ["Health Pot", "Armor Boost","MR Boost", "DMG Orb"]
         self.ranItem = listOfItems[random.randint(0,3)]
+        
 
 class items():
     def __init__(self, HealthPot, ArmorBoost, MRBoost, DMGOrb):
@@ -66,8 +67,7 @@ class items():
         print("New DMG = " + str(hero.dmg))
 
 class fightMenu():
-    def __init__(self):
-        pass
+
     def menu():
         turn = True
         fight = True
@@ -85,11 +85,11 @@ class fightMenu():
               
               """)
                 if userInput == "Attack":
-                    enemy.hp -= (hero.dmg - enemy.arm)
-                    if enemy.arm > hero.dmg:
+                    if enemy.arm >= hero.dmg:
                         print("Your attacks do nothing to this creature, you should run!")
                         turn = False
                     else:
+                        enemy.hp -= (hero.dmg - enemy.arm)
                         print(f"\n\nThe enemy took %s damage!\n\n" % (hero.dmg - enemy.arm))
                         print("Enemy hp = " + str(enemy.hp) + " remaining\n")
                         turn = False
@@ -97,6 +97,7 @@ class fightMenu():
                         print("The enemy has been slain!\n\n")
                         turn = False
                         fight = False
+                        hero.ranItem = hero.ranItem + ", " + hero.ranItem
                 elif userInput == "Use Item":
                     inputItem = input("\nWhat item would you like to use: " + hero.ranItem + "\n\n")
                     if inputItem == hero.ranItem:
@@ -118,10 +119,10 @@ class fightMenu():
                     turn = False
                     
                 elif userInput == "Flee":
-                    hero.hp == 0
+                    hero.hp = 0
                     print("\nAs you run away the enemy stabs you in the back, ending your journey.\n")
                     fight = False
-                # break
+                    break
                 else:
                     print("\nA simple task by many, failed by you. Lose your turn.\n")
                     turn = False
@@ -131,6 +132,7 @@ class fightMenu():
                 print("The enemy lunges forward and swings its weapon!")
                 if hero.arm >= enemy.dmg:
                     print("The enemy's attack barely scratched you!")
+                    turn = True
                     pass
                 else:    
                     hero.hp -= (enemy.dmg - hero.arm)
@@ -184,14 +186,21 @@ class EndCredits():
             
 hero = randStats       
 enemy = randStats
+item = items
+game = True
 
 main.load_message()
 hero.statistics(hero)
 print(f"Your starting stats are: Armor: %s MR: %s DMG: %s HP: %s ITEM: %s" % (hero.arm, hero.mr, hero.dmg, hero.hp, hero.ranItem))
 time.sleep(3)
-print("\n\n\nAn enemy approaches!\n\n\n")
-time.sleep(3)
-battleAnimation.arrow()
-time.sleep(3)
-fightMenu.menu()
+while game == True: 
+    print("\n\n\nAn enemy approaches!\n\n\n")
+    time.sleep(3)
+    battleAnimation.arrow()
+    time.sleep(3)
+    fightMenu.menu()
+    
+    if hero.hp <= 0:
+        game = False
+    
 EndCredits.credits()
