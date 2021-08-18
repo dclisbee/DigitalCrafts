@@ -1,0 +1,91 @@
+body {
+    font-family: "Poppins", sans-serif;
+    color: #d4f1f4;
+    margin: 0;
+  }
+  
+  /* body {
+          font-family: Sans-Serif;
+          margin: 0;
+          font-size: 20px;
+        } */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(4, 63, 97);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #28ddc5;
+    color: white;
+  }
+  
+  .main {
+    background-color: #d4f1f4;
+    display: flex;
+    flex-wrap: wrap;
+    height: 464px;
+  }
+  
+  .container1{
+    background-color: #75e6da;
+    height: 446px;
+    width: 10%;
+    margin: 5px;
+  }
+  
+  .container4 {
+    background-color: #189ab4;
+    height: 96%;
+    width: 88%;
+    margin: 5px;
+
+  }
+  .container2,
+  .container5 {
+    background-color: #05445e;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .container1,
+  .container4,
+  .container2,
+  .container5 {
+    /* padding-left: 5px; */
+    padding-top: 10px;
+    border-radius: 5px;
+  }
+
+  h1{
+      padding-left: 10px;
+      padding-bottom: 5px;
+      text-align: center;
+  }
+
+  .dustin{
+      display: block;
+      /* margin-left: auto; */
+      margin-right: auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+  }

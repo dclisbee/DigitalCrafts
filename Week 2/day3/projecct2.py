@@ -4,6 +4,7 @@ import time
 class main:
     def load_message():
         intro = """
+        
         Welcome to the game of Helios!
         This is a turn-based RPG that puts your skills to the test.
         Will you fight and conquer, or run and fight another day?
@@ -38,7 +39,7 @@ class randStats():
         self.arm = random.randint(2,9)
         self.mr = random.randint(2,9)
         self.dmg = random.randint(5,10)
-        self.hp = random.randint(50,100)
+        self.hp = random.randint(15,25)
         listOfItems = ["Health Pot", "Armor Boost","MR Boost", "DMG Orb"]
         self.ranItem = listOfItems[random.randint(0,3)]
         
@@ -51,7 +52,7 @@ class items():
         self.DMGOrb = DMGOrb
     def healthPot(self):
         self.HealthPot += hero.hp
-        hero.hp += 20
+        hero.hp += 10
         print("New hp = " + str(hero.hp))
     def armorBoost(self):
         self.ArmorBoost = hero.arm
@@ -63,7 +64,7 @@ class items():
         print("New MR = " + str(hero.mr))
     def dmgOrb(self):
         self.DMGOrb = hero.dmg
-        hero.dmg += 10
+        hero.dmg += 5
         print("New DMG = " + str(hero.dmg))
 
 class fightMenu():
@@ -184,11 +185,11 @@ class EndCredits():
             
             """)
             
+            
 hero = randStats       
 enemy = randStats
 item = items
 game = True
-
 main.load_message()
 hero.statistics(hero)
 print(f"Your starting stats are: Armor: %s MR: %s DMG: %s HP: %s ITEM: %s" % (hero.arm, hero.mr, hero.dmg, hero.hp, hero.ranItem))

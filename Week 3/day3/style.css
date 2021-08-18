@@ -1,0 +1,27 @@
+
+
+  .grid {
+    display: grid;
+    height: 600px;
+    width: 600px;
+    border: 2px solid violet;
+    /* margin: 5px; */
+    grid-template-areas: 
+    "box box box"
+    "box box box"
+    "box box box";
+    grid-template-columns: 5px, 5px, 5px;
+    grid-template-rows: 5px, 5px, 5px;
+
+  }
+
+  .box{
+    height: auto;
+    width: auto;
+    border: 3px solid black;
+    grid-area: "box";
+    background-color: aquamarine;
+  }
+
+
+
