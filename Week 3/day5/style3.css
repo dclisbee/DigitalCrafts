@@ -1,0 +1,29 @@
+.container-fluid{
+    background-color: black;
+}
+.nav-item{
+    
+}
+
+.nav-link{
+
+}
+
+body{
+    background-color: darkgray;
+}
+
+h3{
+    padding-top: 20px;
+    
+}
+
+.container1, .container2, .container3, .container4{
+    width: 400px;
+    padding-left: 10px;
+    color: white;
+}
+.img-responsive{
+    height: 150px;
+    width: 200px;
+}
