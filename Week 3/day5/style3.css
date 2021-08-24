@@ -10,7 +10,7 @@
 }
 
 body{
-    background-color: darkgray;
+    
 }
 
 h3{
@@ -26,4 +26,8 @@ h3{
 .img-responsive{
     height: 150px;
     width: 200px;
+}
+
+.navbar{
+    background-color: gray;
 }
