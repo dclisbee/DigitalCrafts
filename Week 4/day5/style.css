@@ -1,0 +1,39 @@
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+   
+  ul {
+    list-style: none;
+  }
+
+  .heading {
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    .top-banner form {
+      flex-direction: column;
+    }
+     
+    .top-banner form input,
+    .top-banner form button {
+      width: 100%;
+    }
+   
+    .top-banner form button {
+      margin: 20px 0 0 0;
+    }
+     
+    .top-banner form .msg {
+      position: static;
+      max-width: none;
+      min-height: 0;
+      margin-top: 10px;
+    }
+}
+
