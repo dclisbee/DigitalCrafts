@@ -1,8 +1,4 @@
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
+
    
   ul {
     list-style: none;
@@ -13,16 +9,41 @@ img {
     font-size: 4rem;
     letter-spacing: 0.02em;
     padding: 0 0 30px 0;
+    text-align: center;
   }
 
+
+.input {
+    position: relative;
+    display: block;
+    margin : 0, auto;
+    margin-left: 45%;
+}
+.submit{
+        position: relative;
+        display: block;
+        margin : 0, auto;
+        margin-left: 48%;
+}
+.container{
+    margin: 20% auto 0px; 
+    width: 100%; 
+    text-align:center;
+    
+}
   @media screen and (max-width: 700px) {
     .top-banner form {
-      flex-direction: column;
+      flex-direction: block;
+  
     }
      
     .top-banner form input,
     .top-banner form button {
       width: 100%;
+      position: relative;
+      display: block;
+      margin : 0;
+      
     }
    
     .top-banner form button {
