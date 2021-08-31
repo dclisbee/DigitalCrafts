@@ -1,4 +1,4 @@
-// const riotKey = "RGAPI-ab0a1f1d-9af9-407a-bd2d-e8ab94f6e953";
+// const riotKey = "";
 // const sp = "%20";
 // // var require : NodeRequire;
 // // const requireStack = require("require-stack")
@@ -66,7 +66,7 @@ async function champions(champ){
     const champPic = document.createElement("img");
     const champText = document.createElement("p");
     const picContainer = document.querySelector(".c");
-    
+
 let champion = champ
 const specChamp = await fetch("http://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/champion/" + champion + ".json")
 specChamp.json();
