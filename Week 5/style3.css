@@ -1,24 +1,4 @@
 .container{
-    display: grid;
-    
-    grid-template: 
-            "a a a" 200px
-            "b c c" 100px
-            "b c c" 100px / 1fr 1fr 1fr;
-}
-.a{
-grid-area: a;
-background-color: aqua;
-
-
-}.b{
-    grid-area: b;
-    background-color: aquamarine;
-    height: 400px;
-}
-
-.c{
-    grid-area: c;
-    background-color: bisque;
-    height: 400px;
+background-color:aqua;
+height: 1000px;
 }

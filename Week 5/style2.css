@@ -1,24 +1,35 @@
-.container{
-    display: grid;
-    
-    grid-template: 
-            "a a a" 200px
-            "b c c" 100px
-            "b c c" 100px / 1fr 1fr 1fr;
+.container img{
+    width: 100%;
 }
-.a{
-grid-area: a;
-background-color: aqua;
 
+body{
+    background-image: linear-gradient(#ade8f4,  #00b4d8, #ade8f4, #00b4d8);
+    height: 14800px;
+}
 
-}.b{
-    grid-area: b;
-    background-color: aquamarine;
-    height: 400px;
+img{
+    border-radius: 5%;
+    
 }
 
 .c{
-    grid-area: c;
-    background-color: bisque;
-    height: 400px;
+    text-align: center;
+
+}
+
+.article{
+    margin-bottom: 40px;
+}
+
+h2, h4{
+    font-family: "Papyrus";
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        background-image: linear-gradient(#ade8f4,  #00b4d8, #ade8f4, #00b4d8);
+        height: 10300px;
+    }
 }

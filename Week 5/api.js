@@ -1,4 +1,4 @@
-// const riotKey = "";
+
 // const sp = "%20";
 // // var require : NodeRequire;
 // // const requireStack = require("require-stack")
@@ -38,9 +38,8 @@
 
 //     }
 
-//     const link = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/$(name)?$(riotKey)`;
-//     const response = await fetch(link);
-//     let data = await response.json();
+//     const link = await fetch(`https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/$(name)?$(riotKey)`);
+//     let data = await link.json();
 //     if(ch == "id"){
 //         console.log("wrong one reached");
 //     }else if(ch == "accountId"){
@@ -62,43 +61,27 @@
 
 // }
 
-async function champions(champ){
-    const champPic = document.createElement("img");
-    const champText = document.createElement("p");
-    const picContainer = document.querySelector(".c");
-
-let champion = champ
-const specChamp = await fetch("http://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/champion/" + champion + ".json")
-specChamp.json();
-crd = specChamp["data"];
-selectChamp = crd[champion]+crd["blurb"];
-console.log(selectChamp);
-champId = specChamp[champion]["key"];
-const champImgFull = await fetch("https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/" + champId)
-const jsonChampImg = await champImgFull.json();
-champPic.src = jsonChampImg.image;
-picContainer.append(champPic);
-return jsonChampImgFull;
-
-}
-
-champions("Aatrox");
-
-
-
-
+// const submitButton = document.querySelector(".submit");
+// const input = document.querySelector(".input");
 // async function fetchData(){
-//     sumName = document.getElementsByClassName(".input").value;
-//     url = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + sumName + "?api_key=" + key();
+//     //sumName = document.getElementsByClassName(".input").value;
+ 
+//     let summoner = document.getElementById("myInput").value;
+//     url = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + summoner + "?api_key=" + riotKey;
 //     const allData = await fetch(url);
-//     const jsonData = await data.json();
+//     const jsonData = await allData.json();
+
+//     const infoCont = document.querySelector(".c")
+//     const text = document.createElement("p")
+//     let div = document.createElement("div");
+//         div.innerHTML = 'Name: ' + jsonData[PromiseResult].name + ' ' + jsonData[PromiseResult].summonerLevel;
+//         c.appendChild(div);
 //     return jsonData;
 // }
 
-// const submitButton = document.querySelector(".submit");
-// const input = document.querySelector(".input");
+
 // submitButton.addEventListener("click", (e) => {
 //     e.preventDefault();
-//     console.log();
+//     console.log(fetchData());
 //     fetchData();
 // })
