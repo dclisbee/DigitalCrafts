@@ -1,22 +1,44 @@
-const express = require('express')
+const cowsay = require("cowsay")
+const express = require("express")
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+  app.post('/sendCowUserName', (req, res) => {
+    res.send(cowsay.say({
+        text : "Sending Cow Username",
+        e : "oO",
+        T : "U "
+    }));
   })  
 
-
-  app.put('/cats', (req, res) => {
-    res.send(`<h1>'Meow!'</h1>`)
+  app.post('/sendCowAppointment', (req, res) => {
+    res.send(cowsay.say({
+        text : "Sending Cow Appointment",
+        e : "oO",
+        T : "U "
+    }));
   })  
 
-  app.delete('/dogs', (req, res) => {
-    res.send(`<h1>'Woof!'</h1>`)
+  app.get('/getCowUserName', (req, res) => {
+    res.send(cowsay.say({
+        text : "Getting Cow Username",
+        e : "oO",
+        T : "U "
+    }));
   })  
 
-  app.post('/cats_and_dogs', (req, res) => {
-    res.send(`<h1>'Dogs and cats living together...mass hysteria!!'</h1>`)
+  app.get('/getCowAppointment', (req, res) => {
+    res.send(cowsay.say({
+        text : "Getting Cow Appointment",
+        e : "oO",
+        T : "U "
+    }));
+  })  
+
+  app.delete('/deleteCowUser', (req, res) => {
+    res.send(" ")
+    console.log("Deleting Cow User")
+        
   })  
 
 app.listen(port, () => {
