@@ -1,18 +1,17 @@
 import React from "react";
-import { useState } from "react";
-
 function DB(props) {
-	const { list } = props;
+	const list = props;
 	return (
-		<div>
-			<h1>User Info</h1>
-			<ul>
-				{list.map((userInfo) => (
-					<li>{userInfo}</li>
-				))}
-			</ul>
+		<div className="dbContainer">
+			<h1>Database</h1>
+			<div className="Names">
+				<ul>
+					{list.user.map((items) => (
+						<li>{items}</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 }
-
 export default DB;
