@@ -1,12 +1,12 @@
 import React from "react";
 function DB(props) {
-	const list = props;
+	const { allInfo } = props;
 	return (
 		<div className="dbContainer">
 			<h1>Database</h1>
 			<div className="Names">
 				<ul>
-					{list.user.map((items) => (
+					{allInfo.user.map((items) => (
 						<li>{items}</li>
 					))}
 				</ul>

@@ -3,11 +3,11 @@ import Signup from "./components/Signup.js";
 import DB from "./components/DB.js";
 
 function App() {
-	const [allInfo, setAllInfo] = useState([]);
+	const [info, setAllInfo] = useState([]);
 	return (
 		<div className="App">
-			<Signup allInfo={allInfo} setAllInfo={setAllInfo} />
-			<DB allInfo={allInfo} />
+			<Signup allInfo={info} setAllInfo={setAllInfo} />
+			<DB allInfo={info} />
 		</div>
 	);
 }
