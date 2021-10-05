@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import { FormStyled, FormDiv, FormIn } from "../styled/FormStyle";
 
 export default function Form() {
+	const [formData, setFormData] = useState({});
+
 	return (
-		<div>
-			<p>Login</p>
-			<form></form>
-			<form></form>
-			<p>Forgot Your Password</p>
-			<button>Register</button>
-			<button>Sign In</button>
-		</div>
+		<FormDiv>
+			<FormStyled>
+				<FormIn
+					onChange={(e) =>
+						setFormData({ ...formData, [e.target.name]: e.target.value })
+					}
+					type="text"
+					placeholder="username"
+					name="username"
+					value={formData?.username}
+				/>
+				<FormIn
+					onChange={(e) =>
+						setFormData({ ...formData, [e.target.name]: e.target.value })
+					}
+					type="text"
+					placeholder="email"
+					name="email"
+					value={formData?.email}
+				/>
+				<FormIn
+					onChange={(e) =>
+						setFormData({ ...formData, [e.target.name]: e.target.value })
+					}
+					type="password"
+					placeholder="password"
+					name="password"
+					value={formData?.password}
+				/>
+				<div>
+					<FormIn type="submit" />
+				</div>
+			</FormStyled>
+		</FormDiv>
 	);
 }
