@@ -5,6 +5,6 @@ export const NavbarContainer = styled.div`
 `;
 
 export const MainCon = styled.div`
-	margin: 0px;
-	padding: 0px;
+	/* margin: 0px;
+	padding: 0px; */
 `;

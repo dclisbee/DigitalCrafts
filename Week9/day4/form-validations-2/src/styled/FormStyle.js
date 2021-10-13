@@ -7,13 +7,17 @@ export const FormStyled = styled.form`
 `;
 
 export const FormDiv = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	height: 300px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	padding: 25px;
 	padding-top: 70px;
 	background-color: darkblue;
-	display: flex;
+	border-radius: 40px;
 `;
 
 export const FormIn = styled.input`

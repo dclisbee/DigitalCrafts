@@ -1,5 +1,5 @@
 {
-  "name": "form-validations-2",
+  "name": "redux-3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,19 +7,14 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "dotenv": "^10.0.0",
-    "plotly.js": "^2.5.1",
-    "plotly.js-dist": "^2.5.1",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-plotly.js": "^2.5.1",
     "react-redux": "^7.2.5",
-    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
-    "styled-components": "^5.3.1",
+    "redux-thunk": "^2.3.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

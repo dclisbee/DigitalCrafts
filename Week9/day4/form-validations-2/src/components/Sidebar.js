@@ -1,30 +1,23 @@
 import React from "react";
 import { IMG, SidebarStyle, P } from "../styled/SidebarStyled";
 import { Link } from "react-router-dom";
-export default function Sidebar() {
+import { sidebardata } from "./SidebarLinksData.js";
+import SidebarLinks from "./SidebarLinks";
+
+export default function Sidebar(props) {
+	const viewSidebar = props.viewSidebar;
+
 	return (
-		<SidebarStyle>
-			<P>
-				<IMG
-					src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg"
-					alt=""
-				></IMG>
-				<P>
-					<Link to="/dashboard">Dashboard</Link>
-				</P>
-				<P>
-					<Link to="/form">Form</Link>
-				</P>
-				<P>
-					<Link to="/garage">Garage</Link>
-				</P>
-				<P>
-					<Link to="/account">Account</Link>
-				</P>
-				<P>
-					<Link to="/">Home</Link>
-				</P>
-			</P>
-		</SidebarStyle>
+		<>
+			{viewSidebar ? (
+				<SidebarStyle>
+					{sidebardata?.map((linkData, index) => (
+						<SidebarLinks key={index} linkData={linkData} />
+					))}
+				</SidebarStyle>
+			) : (
+				<></>
+			)}
+		</>
 	);
 }
