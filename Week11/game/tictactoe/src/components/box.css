@@ -1,0 +1,6 @@
+.boxStyle {
+	background: lightblue;
+	border: 2px solid darkblue;
+	cursor: pointer;
+	outline: none;
+}

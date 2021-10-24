@@ -8,6 +8,7 @@ export default function SignupForm() {
 	const dispatch = useDispatch();
 	const user = useSelector((state) => state);
 	const counter = useSelector((state) => state.counterData);
+
 	return (
 		<div className="signupForm">
 			<form action="">
@@ -38,11 +39,12 @@ export default function SignupForm() {
 				/>
 				<input type="submit" onClick={(e) => createUserLogin(e, user)} />
 			</form>
-			{counter}
-			<button onClick={() => dispatch({ type: "INCREMENT_COUNTER" })}>
+			{/* {counter} */}
+			{/* <button onClick={() => dispatch({ type: "INCREMENT_COUNTER" })}>
 				Increment
-			</button>
-			<button>Decrement</button>
+			</button> */}
+
+			{/* <button>Decrement</button> */}
 		</div>
 	);
 }
