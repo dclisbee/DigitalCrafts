@@ -5,7 +5,7 @@ import "../styles/cardcont.css";
 
 export default function CardContainer() {
 	return (
-		<div>
+		<div className="card-cont">
 			<h1>Most Popular</h1>
 			<hr></hr>
 			<Card />

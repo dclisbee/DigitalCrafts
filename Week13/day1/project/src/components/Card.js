@@ -36,7 +36,9 @@ export default function Card() {
 	return (
 		<div className="main2">
 			{data?.map((movie) => (
-				<Movie movie={movie} />
+				<div className="cards">
+					<Movie movie={movie} />
+				</div>
 			))}
 		</div>
 	);

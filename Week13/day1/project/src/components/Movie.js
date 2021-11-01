@@ -13,17 +13,18 @@ export default function Movie({ movie }) {
 	const dispatch = useDispatch();
 	return (
 		<div className="card">
-			<img
-				id="myImg"
-				alt=""
-				variant="primary"
-				src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
-				onClick={() => {
-					handleShow();
-				}}
-			></img>
-			<p className="container">{movie.title}</p>
-
+			<div className="">
+				<img
+					id="myImg"
+					alt=""
+					variant="primary"
+					src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
+					onClick={() => {
+						handleShow();
+					}}
+				></img>
+				<p className="container">{movie.title}</p>
+			</div>
 			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>{movie.title}</Modal.Title>
