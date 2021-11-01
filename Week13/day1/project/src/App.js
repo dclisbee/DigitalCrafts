@@ -4,8 +4,6 @@ import Watchlist from "./components/Watchlist";
 import Search from "./components/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageNotFound from "./components/PageNotFound";
-
-import "./App.css";
 function App() {
 	return (
 		<Router>

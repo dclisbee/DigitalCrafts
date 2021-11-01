@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import "../styles/movie.css";
+import { ADD_TO_LIST } from "../actions/actions";
 
 export default function Movie({ movie }) {
 	const [show, setShow] = useState(false);
@@ -42,7 +43,7 @@ export default function Movie({ movie }) {
 						variant="primary"
 						onClick={() => {
 							dispatch({
-								type: "ADD_TO_LIST",
+								type: ADD_TO_LIST,
 								payload: { movie },
 							});
 						}}

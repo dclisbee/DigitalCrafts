@@ -1,5 +1,5 @@
 .main-cont {
 	background-image: linear-gradient(to bottom right, #274472, white);
 	/* placeholder till api is attached v */
-	height: 1950px;
+	padding-bottom: 40px;
 }

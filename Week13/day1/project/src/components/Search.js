@@ -5,6 +5,7 @@ import "../styles/search.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Movie from "./Movie";
+import { FIND_MOVIE } from "../actions/actions";
 
 export default function Search() {
 	const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export default function Search() {
 			const jsonMovies = await getMovies.json();
 
 			dispatch({
-				type: "FIND_MOVIE",
+				type: FIND_MOVIE,
 				payload: jsonMovies.results,
 			});
 		};

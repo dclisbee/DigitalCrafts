@@ -17,9 +17,32 @@
 
 /* Add some padding inside the card container */
 
-.main2 {
-	display: grid;
-	grid-template-columns: repeat(4, 250px [col-start]);
+@media (max-width: 1920px) {
+	.main2 {
+		display: grid;
+		grid-template-columns: repeat(4, 250px [col-start]);
+	}
+}
+
+@media (max-width: 1640px) {
+	.main2 {
+		display: grid;
+		grid-template-columns: repeat(3, 250px [col-start]);
+	}
+}
+
+@media (max-width: 1280px) {
+	.main2 {
+		display: grid;
+		grid-template-columns: repeat(2, 250px [col-start]);
+	}
+}
+
+@media (max-width: 750px) {
+	.main2 {
+		display: grid;
+		grid-template-columns: repeat(1, 250px [col-start]);
+	}
 }
 
 img {

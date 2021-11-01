@@ -4,6 +4,7 @@ import "../styles/home.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Movie from "./Movie";
+import { GET_LIST } from "../actions/actions";
 export default function Watchlist() {
 	const dispatch = useDispatch();
 	const [counter, setCounter] = useState(0);
@@ -11,7 +12,7 @@ export default function Watchlist() {
 
 	useEffect(() => {
 		dispatch({
-			type: "GET_LIST",
+			type: GET_LIST,
 			payload: data,
 		});
 
